@@ -9,10 +9,10 @@ logger = setup_logger("metrics")
 def calculate_metrics(actual: np.ndarray, predicted: np.ndarray) -> Dict[str, float]:
     try:
         metrics = {
-            'MSE': mean_squared_error(actual, predicted),
-            'RMSE': np.sqrt(mean_squared_error(actual, predicted)),
-            'MAE': mean_absolute_error(actual, predicted),
-            'R2': r2_score(actual, predicted)
+            'MSE': round(mean_squared_error(actual, predicted), 2),
+            'RMSE': round(np.sqrt(mean_squared_error(actual, predicted)), 2),
+            'MAE': round(mean_absolute_error(actual, predicted), 2),
+            'R2': round(r2_score(actual, predicted), 2)
         }
         
         logger.info("Metrics calculated successfully")

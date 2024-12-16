@@ -34,7 +34,7 @@ def get_company_options() -> list:
         # Add full name
         options.append((f"{company['name']} ({company['ticker']})", company['ticker']))
         # Add aliases
-        options.extend([(alias, company['ticker']) for alias in company['aliases']])
+        # options.extend([(alias, company['ticker']) for alias in company['aliases']])
     return sorted(options, key=lambda x: x[0])
 
 def display_metrics(data, company_info):
@@ -54,13 +54,13 @@ def display_prediction_metrics(actual, predicted):
         
         col1, col2, col3, col4, col5 = st.columns(5)
         with col1:
-            st.metric("RMSE", f"{metrics.get('RMSE', 0):.2f}")
+            st.metric("RMSE", f"{metrics.get('RMSE', 0)}")
         with col2:
-            st.metric("MAE", f"{metrics.get('MAE', 0):.2f}")
+            st.metric("MAE", f"{metrics.get('MAE', 0)}")
         with col3:
-            st.metric("R² Score", f"{metrics.get('R2', 0):.2f}")
+            st.metric("R² Score", f"{metrics.get('R2', 0)}")
         with col4:
-            st.metric("MSE", f"{metrics.get('MSE', 0)::.2f}")
+            st.metric("MSE", f"{metrics.get('MSE', 0)}")
         with col5:
             st.metric("Direction Accuracy", f"{metrics.get('Direction_Accuracy', 0):.1f}%")
             st.caption("Accuracy of predicting price movement direction")

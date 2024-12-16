@@ -3,6 +3,7 @@ import torch
 import torch.nn as nn
 from sklearn.preprocessing import MinMaxScaler
 from torch.utils.data import DataLoader
+from stqdm import stqdm
 
 from src.config import ModelConfig
 from src.utils.logger import setup_logger
@@ -75,7 +76,7 @@ class StockPredictor:
             
             self.model.train()  # Set model to training mode
             
-            for epoch in range(self.config.EPOCHS):
+            for epoch in stqdm(range(self.config.EPOCHS)):
                 epoch_loss = 0
                 batch_count = 0
                 

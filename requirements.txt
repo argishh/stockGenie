@@ -1,0 +1,9 @@
+streamlit
+pandas
+numpy
+yfinance
+torch
+scikit-learn
+plotly
+pytest
+python-dotenv

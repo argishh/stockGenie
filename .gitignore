@@ -3,6 +3,9 @@ AMZN.csv
 STOCK_US_XNAS_AMZN.csv
 notebooks/
 
+# Models
+*.pt
+
 # Logs
 logs
 *.log

@@ -215,7 +215,7 @@ def test_early_stopping(stock_data, data_loader):
                 'epochs_trained': len(train_losses),
                 'final_train_loss': train_losses[-1],
                 'final_val_loss': val_losses[-1],
-                'stopped_early': len(train_losses) < ModelConfig().EPOCHS
+                'stopped_early': len(train_losses) < ModelConfig().TESTING_EPOCHS
             })
             
             logger.info(f"Fold {fold + 1} Results:")
@@ -250,7 +250,7 @@ def test_early_stopping(stock_data, data_loader):
     # Add assertions
     assert len(results) > 0
     assert best_result['avg_val_loss'] < float('inf')
-    assert best_result['avg_epochs'] <= ModelConfig().EPOCHS
+    assert best_result['avg_epochs'] <= ModelConfig().TESTING_EPOCHS
     for result in results:
         assert result['avg_train_loss'] > 0
         assert result['avg_val_loss'] > 0

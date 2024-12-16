@@ -12,6 +12,7 @@ class ModelConfig:
     PREDICTION_DAYS: int = 30
     BATCH_SIZE: int = 32
     EPOCHS: int = 25
+    TESTING_EPOCHS: int = 250
     LEARNING_RATE: float = 0.001
 
 @dataclass

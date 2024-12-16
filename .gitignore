@@ -1,6 +1,6 @@
 # Datasets
-AMZN.csv
-STOCK_US_XNAS_AMZN.csv
+*.csv
+*.xlsx
 notebooks/
 
 # Models

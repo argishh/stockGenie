@@ -48,6 +48,7 @@ Contributions are welcome! Here's how you can help:
 5. Open a Pull Request
 
 ## Future Tasks
+- [x] Add progress bars (for model training)
 - [ ] Add more data sources
 - [ ] Try SOTA ML models
 - [ ] Refine visualizations

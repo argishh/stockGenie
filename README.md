@@ -1,6 +1,6 @@
-# stockGinie
+# stockGenie
 
-A price prediction application using PyTorch LSTM, trained on live stock price data and deployed using Streamlit.
+A price prediction application using trained on live stock price data and deployed using Streamlit.
 
 ## Features
 - Real-time stock price data fetching
